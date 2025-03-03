@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-
+import myImage from "./assets/qr.jpg"
 const App = () => {
   const [showConfetti, setShowConfetti] = useState(false);
   const [rsvp, setRsvp] = useState(null);
@@ -287,7 +287,7 @@ const App = () => {
                 <div className="bg-white p-4 rounded-lg shadow-md w-48 h-48 flex items-center justify-center">
                   {/* Placeholder for QR code - In a real app, replace with actual QR code */}
                   <div className="w-50 h- bg-black p-2 rounded-md flex items-center justify-center">
-                    <img src="./src/assets/qr.jpg" alt="" />
+                    <img src={myImage} alt="" />
                   </div>
                 </div>
                 <div className="flex-1">
