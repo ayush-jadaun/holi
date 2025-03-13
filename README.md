@@ -13,17 +13,14 @@ This project is a React-based Media Gallery that displays images and videos with
 - **Performance Optimized:** Uses memoization and optimized callbacks to achieve smooth performance.
 
 ## Project Structure
-
 ```
+public/
+├── images/
+│   ├── a1.jpg
+│   └──a2.jpg
+├── videos/
+│   └── v1.mp4
 src/
-├── assets/
-│   ├── images/
-│   │   ├── a1.jpg
-│   │   └── a2.jpg
-│   ├── videos/
-│   │   └── v1.mp4
-│   └── thumbnails/
-│       └── t1.jpg
 ├── components/
 │   ├── MediaGallery.jsx
 │   ├── MediaItem.jsx
@@ -78,7 +75,7 @@ In `App.jsx`, media items should be provided in the following format:
 {
 type: "image",
     url: "/images/a1.jpg", 
-    caption: "Discription",
+    caption: "Description",
 }
 ```
 
@@ -87,7 +84,7 @@ type: "image",
 {
  type: "video",
     url: "/videos/v1.mp4", 
-    caption: "Discription",
+    caption: "Description",
 }
 ```
 
