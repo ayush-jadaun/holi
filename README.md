@@ -68,6 +68,9 @@ The app will be available at [http://localhost:3000](http://localhost:5173).
 
 ## Media Data Format
 
+First put the media file in the respective images or videos folder in assets.
+Make sure to rename properly.
+
 In `App.jsx`, media items should be provided in the following format:
 
 ### For Images
