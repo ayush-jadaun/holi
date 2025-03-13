@@ -9,7 +9,7 @@ import React, {
 import { motion, AnimatePresence } from "framer-motion";
 import MediaItem from "./MediaItem";
 import MediaModal from "./MediaModal";
-import { createConfettiEffects } from "../../utils/confettiEffects";
+import { createConfettiEffects } from "../utils/confettiEffects";
 
 const MediaGallery = ({ media = [] }) => {
   const [selectedMedia, setSelectedMedia] = useState(null);

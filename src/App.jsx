@@ -1,5 +1,5 @@
 import React from "react";
-import MediaGallery from "./components/Gallery/MediaGallery";
+import MediaGallery from "./components/MediaGallery";
 
 const App = () => {
   const media = [
@@ -19,7 +19,21 @@ const App = () => {
       url: "./src/assets/images/a2.jpg",
       caption: "Bhoot",
     },
-
+    {
+      type: "image",
+      url: "./src/assets/images/a3.jpg",
+      caption: "ECED 1ST Draft",
+    },
+    {
+      type: "image",
+      url: "./src/assets/images/a4.jpg",
+      caption: "ECED 1ST DRAFT",
+    },
+    {
+      type: "image",
+      url: "./src/assets/images/a5.jpg",
+      caption: "Random Colourful People",
+    },
   ];
 
   return <MediaGallery media={media} />;

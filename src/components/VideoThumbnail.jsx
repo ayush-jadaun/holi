@@ -1,16 +1,32 @@
-import React, { memo } from "react";
+import React, { memo, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import { FiPlay } from "react-icons/fi";
 
 const VideoThumbnail = memo(({ item, index, openMedia, setRef }) => {
+  const videoRef = useRef(null);
+
+  useEffect(() => {
+    if (videoRef.current) {
+      const playPromise = videoRef.current.play();
+      if (playPromise !== undefined) {
+        playPromise.catch((error) => {
+          console.warn("Autoplay prevented:", error);
+        });
+      }
+    }
+  }, []);
+
   return (
     <div className="relative w-full h-full">
       <video
-        ref={(el) => setRef(index, el)}
+        ref={(el) => {
+          videoRef.current = el;
+          setRef(index, el);
+        }}
         src={item.url}
-        poster={item.thumbnail}
         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
         playsInline
+        autoPlay
         muted
         loop
       />
