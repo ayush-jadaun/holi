@@ -68,7 +68,7 @@ The app will be available at [http://localhost:3000](http://localhost:5173).
 
 ## Media Data Format
 
-First put the media file in the respective images or videos folder in assets.
+First put the media file in the respective images or videos folder in public.
 Make sure to rename properly.
 
 In `App.jsx`, media items should be provided in the following format:
@@ -76,19 +76,18 @@ In `App.jsx`, media items should be provided in the following format:
 ### For Images
 ```javascript
 {
-  type: "image",
-  url: "./src/assets/images/a1.jpg",
-  caption: "Description for the image"
+type: "image",
+    url: "/images/a1.jpg", 
+    caption: "Discription",
 }
 ```
 
 ### For Videos
 ```javascript
 {
-  type: "video",
-  url: "./src/assets/videos/v1.mp4",
-  thumbnail: "./src/assets/thumbnails/t1.jpg",
-  caption: "Description for the video"
+ type: "video",
+    url: "/videos/v1.mp4", 
+    caption: "Discription",
 }
 ```
 
